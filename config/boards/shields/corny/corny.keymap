@@ -13,9 +13,9 @@
 // | SHFT     |  Z  |  X  |  C  |  V  |  B  |  PLAY  |  |      |  N  |  M   |  ,  |  .  |  /  | ENT  |
 //                        | GUI | ALT | RSE |                  SPC | ALT |  LWR |
                         bindings = <
-   &nonr       &kp Q &kp W &kp E    &kp R    &kp T                   &kp Y &kp U     &kp I     &kp O   &kp P    &none
+   &none       &kp Q &kp W &kp E    &kp R    &kp T                   &kp Y &kp U     &kp I     &kp O   &kp P    &none
    &none &mt LGUI A &mt LALT S &mt LCTRL D    &mt LSHFT F    &kp G                   &kp H &mt RSHFT J     &mt RCTRL K     &mt RALT L   &mt RGUI SEMI &kp SQT
-   &nonr     &kp Z &kp X &kp C    &kp V    &kp B &kp C_PP    &none &kp N &kp M     &kp COMMA &kp DOT &kp FSLH &none
+   &none     &kp Z &kp X &kp C    &kp V    &kp B &kp C_PP    &none &kp N &kp M     &kp COMMA &kp DOT &kp FSLH &none
                              &kp ESC &lt 1 SPACE &kp TAB                   &kp RET &lt 2 BSPC &kp DEL
                         >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
