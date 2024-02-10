@@ -3,18 +3,29 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+	behaviors {
+		hm: homerow_mods {
+			compatible = "zmk,behavior-hold-tap";
+			#binding-cells = <2>;
+			tapping-term-ms = <150>;
+			quick-tap-ms = <0>;
+			flavor = "tap-preferred";
+			bindings = <&kp>, <&kp>;
+		};
+	}; 
+
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
 // -------------------------------------------------------------------------------------------------
-// |  TAB     |  Q  |  W  |  E  |  R  |  T  |                  |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL/ESC |  A  |  S  |  D  |  F  |  G  |                  |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT     |  Z  |  X  |  C  |  V  |  B  |  PLAY  |  |      |  N  |  M   |  ,  |  .  |  /  | ENT  |
-//                        | GUI | ALT | RSE |                  SPC | ALT |  LWR |
+// |    |   Q   |   W   |   E    |    R   |   T   |                  |   Y   |   U    |   I    |   O   |   P   | BKSP |
+// |    | GUI/A | ALT/S | CTRL/D | SHFT/F |   G   |                  |   H   | SHFT/J | CTRL/K | ALT/L | GUI/; |  '   |
+// |    |   Z   |   X   |   C    |   V    |   B   |  PLAY  |  |   |   N   |   M    |   ,    |   .   |   /   | ENT  |
+//                          | ESC | LWR/SPC | TAB |                    | RET | RSE/BSPC | DEL |
                         bindings = <
    &none       &kp Q &kp W &kp E    &kp R    &kp T                   &kp Y &kp U     &kp I     &kp O   &kp P    &none
-   &none &mt LGUI A &mt LALT S &mt LCTRL D    &mt LSHFT F    &kp G                   &kp H &mt RSHFT J     &mt RCTRL K     &mt RALT L   &mt RGUI SEMI &kp SQT
+   &none &hm LGUI A &hm LALT S &hm LCTRL D    &hm LSHFT F    &kp G                   &kp H &hm RSHFT J     &hm RCTRL K     &hm RALT L   &hm RGUI SEMI &kp SQT
    &none     &kp Z &kp X &kp C    &kp V    &kp B &kp C_PP    &none &kp N &kp M     &kp COMMA &kp DOT &kp FSLH &none
                              &kp ESC &lt 1 SPACE &kp TAB                   &kp RET &lt 2 BSPC &kp DEL
                         >;
@@ -46,7 +57,7 @@
 
                         bindings = <
    &trans  &kp GRAVE &trans &trans &trans &trans                               &trans &kp MINUS  &kp EQUAL &kp LBKT &kp RBKT &trans
-   &trans &kp N1   &kp N2 &kp N3   &kp N4   &kp N5                                  &kp N6 &kp N7 &kp N8  &kp N9 &kp N0 &kp BSLH
+   &trans &hm LGUI N1   &hm LALT N2 &hm LCTRL N3   &hm LSHFT N4   &kp N5                                  &kp N6 &hm RSHFT N7 &hm RCTRL N8  &hm RALT N9 &hm RGUI N0 &kp BSLH
    &trans &trans   &trans &trans   &trans   &trans    &bootloader  &bootloader &trans &trans  &trans &trans &trans &trans
                              &trans &trans   &trans                    &trans   &trans    &trans                        >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
