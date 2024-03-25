@@ -3,7 +3,8 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define U_TAPPING_TERM 200
-#
+
+#include "../../../miryoku_behaviors/miryoku_babel/miryoku_layer_list.h"
 #include "../../../miryoku_behaviors/miryoku_clipboard.h"
 #include "../../../miryoku_behaviors/miryoku_double_tap_guard.dtsi"
 #include "../../../miryoku_behaviors/miryoku_double_tap_guard.h"
@@ -15,18 +16,6 @@
 #define U_NP &none // key is not present
 #define U_NA &none // present but not available for use
 #define U_NU &none // available but not used
-
-
-#define U_BASE   0
-#define U_EXTRA  1
-#define U_TAP    2
-#define U_BUTTON 3
-#define U_NAV    4
-#define U_MOUSE  5
-#define U_MEDIA  6
-#define U_NUM    7
-#define U_SYM    8
-#define U_FUN    9
 
 #define U_MACRO_VA_ARGS(macro, ...) macro(__VA_ARGS__)
 #define U_STRINGIFY(x) #x
