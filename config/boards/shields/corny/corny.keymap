@@ -2,6 +2,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define U_TAPPING_TERM 200
+#
 #include "../../../miryoku_behaviors/miryoku_clipboard.h"
 #include "../../../miryoku_behaviors/miryoku_double_tap_guard.h"
 #include "../../../miryoku_behaviors/miryoku_shift_functions.h"
@@ -13,7 +15,6 @@
 #define U_NA &none // present but not available for use
 #define U_NU &none // available but not used
 
-#define U_TAPPING_TERM 200
 
 #define U_BASE   0
 #define U_EXTRA  1
