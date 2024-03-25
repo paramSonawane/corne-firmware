@@ -6,6 +6,7 @@
 #include "../../../miryoku_behaviors/miryoku_double_tap_guard.h"
 #include "../../../miryoku_behaviors/miryoku_shift_functions.h"
 #include "../../../miryoku_behaviors/miryoku_mousekeys.h"
+#include "../../../miryoku_behaviors/miryoku_behaviors.dtsi"
 #include "../../../miryoku_behaviors/miryoku_behaviors.h"
 
 #define U_NP &none // key is not present
