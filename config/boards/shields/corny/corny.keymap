@@ -5,6 +5,7 @@
 #define U_TAPPING_TERM 200
 #
 #include "../../../miryoku_behaviors/miryoku_clipboard.h"
+#include "../../../miryoku_behaviors/miryoku_double_tap_guard.dtsi"
 #include "../../../miryoku_behaviors/miryoku_double_tap_guard.h"
 #include "../../../miryoku_behaviors/miryoku_shift_functions.h"
 #include "../../../miryoku_behaviors/miryoku_mousekeys.h"
