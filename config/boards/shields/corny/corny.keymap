@@ -55,12 +55,19 @@
             >;
         };
 
-        U_EXTRA {bindings = <U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU >;};
-        U_TAP  {bindings = <U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU >;};
-        U_BUTTON {bindings = <U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU >;};
-        U_NAV {bindings = <U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU >;};
-        U_MOUSE {bindings = <U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU >;};
-        U_MEDIA {bindings = <U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU >;};
+        U_EXTRA {label = "Extra"; bindings = <U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU >;};
+        U_TAP  {label = "Tap"; bindings = <U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU >;};
+        U_BUTTON {label = "Button"; bindings = <U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU >;};
+
+        U_NAV {
+            label = "Nav";
+            bindings = <
+            U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU
+            >;
+        };
+
+        U_MOUSE {label = "Mouse"; bindings = <U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU >;};
+        U_MEDIA {label = "Media"; bindings = <U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU U_NU >;};
 
         U_NUM {
             label = "Num";
@@ -102,6 +109,7 @@
 
         U_FUN {
             label = "Fun";
+            bindings = <
                 U_NU &kp F12 &kp F7 &kp F8    &kp F9    &kp PSCRN                               U_NA &u_to_U_BASE &u_to_U_EXTRA &u_to_U_TAP U_BOOT   U_NU
                 U_NU &kp F11 &kp F4 &kp F5    &kp F6    &kp SLCK                                U_NA &kp LSHFT    &kp LCTRL     &kp LALT    &kp LGUI U_NU
                 U_NU &kp F10 &kp F1 &kp F2    &kp F3    &kp PAUSE_BREAK &bootloader &bootloader U_NA &u_to_U_FUN  &u_to_U_MEDIA &kp RALT    U_NA     U_NU
