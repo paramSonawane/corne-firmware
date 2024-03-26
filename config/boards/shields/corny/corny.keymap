@@ -1,6 +1,14 @@
 #include <behaviors.dtsi>
+#include <behaviors/mouse_key_press.dtsi>
+#if defined (MIRYOKU_KLUDGE_MOUSEKEYSPR)
+  #include <behaviors/mouse_move.dtsi>
+  #include <behaviors/mouse_scroll.dtsi>
+#endif
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/ext_power.h>
 
 #define U_TAPPING_TERM 200
 
@@ -78,7 +86,7 @@
         U_MEDIA {
             label = "Media";
             bindings = <
-                U_NU U_BOOT   &u_to_U_TAP &u_to_U_EXTRA &u_to_U_BASE  U_NA                         U_NU   U_RGB_HUI    U_RGB_SAI    U_RGB_BRI   U_RGB_TOG  U_NU
+                U_NU U_BOOT   &u_to_U_TAP &u_to_U_EXTRA &u_to_U_BASE  U_NA                         U_RGB_EFF   U_RGB_HUI    U_RGB_SAI    U_RGB_BRI   U_RGB_TOG  U_NU
                 U_NU &kp LGUI &kp LALT    &kp LCTRL     &kp LSHFT     U_NA                         &kp C_PREV  &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT  U_EP_TOG   U_NU
                 U_NU U_NA     &kp RALT    &u_to_U_FUN   &u_to_U_MEDIA U_NA &bootloader &bootloader &u_bt_sel_0 &u_bt_sel_1  &u_bt_sel_2  &u_bt_sel_3 &u_bt_sel_3 U_NU
                                           U_NA          U_NA          U_NA                         &kp C_STOP  &kp C_PP     &kp C_MUTE
