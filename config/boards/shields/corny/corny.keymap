@@ -70,7 +70,7 @@
             bindings = <
                 &bootloader &u_to_U_BASE &u_to_U_EXTRA &u_to_U_TAP U_BOOT    U_NU                &kp LBKT  &kp N7  &kp N8  &kp N9    &kp RBKT  U_NU
                 U_NA        &kp LGUI     &kp LALT      &kp LCTRL   &kp LSHFT U_NU                &kp SQT   &kp N4  &kp N5  &kp N6    &kp EQUAL U_NU
-                &soff   &u_to_U_NUM  &u_to_U_NAV   &kp RALT    U_NA      U_NU &soff U_NU &kp GRAVE &kp N1  &kp N2  &kp N3    &kp BSLH  U_NU
+                U_NA        &u_to_U_NUM  &u_to_U_NAV   &kp RALT    U_NA      U_NU U_NU      U_NU &kp GRAVE &kp N1  &kp N2  &kp N3    &kp BSLH  U_NU
                                                        U_NA        U_NA      U_NA                &kp MINUS &kp DOT &kp N0
 
                 // flip
@@ -105,10 +105,10 @@
         U_NAV {
             label = "Nav";
             bindings = <
-                U_NU &u_out_tog   &u_to_U_TAP &u_to_U_EXTRA &u_to_U_BASE U_NA                          &u_bt_sel_0 &u_bt_sel_1 &u_bt_sel_2 &u_bt_sel_3 &u_bt_sel_4  &bootloader
-                U_NU &kp LGUI     &kp LALT    &kp LCTRL     &kp LSHFT    U_NA                          &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &u_caps_word U_NU
-                U_NU &u_to_U_FUN  &kp RALT    &u_to_U_NUM   &u_to_U_NAV  U_NA &kp C_BRI_AUTO &soff &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     &kp INS      &soff
-                                              U_NA          U_NA         U_NA                          &kp RET     &kp SPACE   &kp DEL
+                U_NU  &u_out_tog   &u_to_U_TAP &u_to_U_EXTRA &u_to_U_BASE U_NA                          &u_bt_sel_0 &u_bt_sel_1 &u_bt_sel_2 &u_bt_sel_3 &u_bt_sel_4  &bootloader
+                U_NU  &kp LGUI     &kp LALT    &kp LCTRL     &kp LSHFT    U_NA                          &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &u_caps_word U_NU
+                &soff &u_to_U_FUN  &kp RALT    &u_to_U_NUM   &u_to_U_NAV  U_NA &kp C_BRI_AUTO      U_NA &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     &kp INS      U_NU
+                                               U_NA          U_NA         U_NA                          &kp RET     &kp SPACE   &kp DEL
             >;
             sensor-bindings = <
                 &inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp PG_UP PG_DN
