@@ -80,7 +80,7 @@
                 //                           U_NA          U_NA         U_NA            &kp MINUS &kp N0 &kp DOT
             >;
             sensor-bindings = <
-                &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp UP DOWN
+                &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp LEFT RIGHT
             >;
         };
 
@@ -111,7 +111,7 @@
                                                U_NA          U_NA         U_NA                          &kp RET     &kp SPACE   &kp DEL
             >;
             sensor-bindings = <
-                &inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp LEFT RIGHT
+                &inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp UP DOWN
             >;
         };
         U_FUN {
@@ -129,7 +129,7 @@
                 //                           U_NA          U_NA         U_NA           &kp TAB         &kp SPACE &kp K_APP
             >;
             sensor-bindings = <
-                &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp UP DOWN
+                &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN
             >;
         };
         U_TAP  {
@@ -194,7 +194,5 @@
                 &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp UP DOWN
             >;
         };
-
-
     };
 };
