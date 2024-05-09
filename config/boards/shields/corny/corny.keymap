@@ -65,7 +65,7 @@
 
         combo_under {
             timeout-ms = <150>;
-            key-positions = <25 34>;
+            key-positions = <25 36>;
             bindings = <&kp UNDER>;
         };
     };
