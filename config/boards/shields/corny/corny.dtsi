@@ -2,7 +2,7 @@
 
 / {
     chosen {
-      zmk,kscan = &kscan0;
+      zmk,kscan = &side_band_behavior_triggers;
       zmk,matrix_transform = &default_transform;
     };
 
@@ -35,6 +35,17 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5) RC(3,5) RC(3,6) RC(2,6) RC(2,7) 
         ;
     };
 
+    side_band_behavior_triggers: side_band_behavior_triggers {
+        compatible = "zmk,kscan-sideband-behaviors";
+        wakeup-source;
+        kscan = <&kscan0>;
+        soft_off {
+            column = <5>;
+            row = <3>;
+            bindings = <&hw_soft_off>;
+        };
+    };
+
     left_encoder: encoder_left {
         compatible = "alps,ec11";
         a-gpios = <&xiao_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
@@ -55,5 +66,21 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5) RC(3,5) RC(3,6) RC(2,6) RC(2,7) 
         compatible = "zmk,keymap-sensors";
         sensors = <&left_encoder &right_encoder>;
         triggers-per-rotation = <20>;
+    };
+};
+
+/ {
+    wakeup_source: wakeup_source {
+        compatible = "zmk,gpio-key-wakeup-trigger";
+
+        trigger = <&on_off_key>;
+        wakeup-source;
+    };
+};
+
+/ {
+    soft_off_wakers {
+        compatible = "zmk,soft-off-wakeup-sources";
+        wakeup-sources = <&wakeup_source>;
     };
 };
