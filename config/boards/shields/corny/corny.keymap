@@ -42,6 +42,18 @@
 #define U_NA &none // present but not available for use
 #define U_NU &none // available but not used
 
+/ { 
+
+    combos {
+        compatible = "zmk,combos";
+        combo_caps_word {
+            timeout-ms = <100>;
+            key-positions = <17 20>;
+            bindings = <&caps_word>;
+        };
+    };
+};
+
 / {
     keymap {
         compatible = "zmk,keymap";
