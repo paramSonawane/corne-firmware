@@ -37,39 +37,11 @@
 #include "../../../miryoku_behaviors/miryoku_mousekeys.h"
 #include "../../../miryoku_behaviors/miryoku_behaviors.dtsi"
 #include "../../../miryoku_behaviors/miryoku_behaviors.h"
+#include "../../../miryoku_behaviors/combos.dtsi"
 
 #define U_NP &none // key is not present
 #define U_NA &none // present but not available for use
 #define U_NU &none // available but not used
-
-/ { 
-    combos {
-        compatible = "zmk,combos";
-        combo_caps_word {
-            timeout-ms = <100>;
-            key-positions = <16 19>;
-            bindings = <&caps_word>;
-        };
-
-        combo_minus {
-            timeout-ms = <150>;
-            key-positions = <1 10>;
-            bindings = <&kp MINUS>;
-        };
-
-        combo_equal {
-            timeout-ms = <150>;
-            key-positions = <13 22>;
-            bindings = <&kp EQUAL>;
-        };
-
-        combo_under {
-            timeout-ms = <150>;
-            key-positions = <25 36>;
-            bindings = <&kp UNDER>;
-        };
-    };
-};
 
 / {
     keymap {

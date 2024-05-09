@@ -1,0 +1,28 @@
+/ { 
+    combos {
+        compatible = "zmk,combos";
+        combo_caps_word {
+            timeout-ms = <100>;
+            key-positions = <16 19>;
+            bindings = <&caps_word>;
+        };
+
+        combo_minus {
+            timeout-ms = <150>;
+            key-positions = <1 10>;
+            bindings = <&kp MINUS>;
+        };
+
+        combo_equal {
+            timeout-ms = <150>;
+            key-positions = <13 22>;
+            bindings = <&kp EQUAL>;
+        };
+
+        combo_under {
+            timeout-ms = <150>;
+            key-positions = <25 36>;
+            bindings = <&kp UNDER>;
+        };
+    };
+};
