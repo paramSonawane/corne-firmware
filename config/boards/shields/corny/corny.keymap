@@ -57,10 +57,10 @@
             bindings = <&kp MINUS>;
         };
 
-        combo_equals {
+        combo_equal {
             timeout-ms = <150>;
             key-positions = <13 22>;
-            bindings = <&kp EQUALS>;
+            bindings = <&kp EQUAL>;
         };
 
         combo_under {
@@ -79,15 +79,9 @@
             label = "Base";
             bindings = <
                 U_NU &kp Q             &kp W         &kp E              &kp R              &kp T               &kp Y            &kp U              &kp I             &kp O           &kp P                 U_NU
-                U_NU U_MT(LGUI, A)     U_MT(LALT, S) U_MT(LCTRL, D)     U_MT(LSHFT, F)     &kp G               &kp H            U_MT(LSHFT, J)     U_MT(LCTRL, K)    U_MT(LALT, L)   U_MT(LGUI, SEMI)       U_NU
+                U_NU U_MT(LGUI, A)     U_MT(LALT, S) U_MT(LCTRL, D)     U_MT(LSHFT, F)     U_MT(HYP, G)               U_MT(HYP, H)            U_MT(LSHFT, J)     U_MT(LCTRL, K)    U_MT(LALT, L)   U_MT(LGUI, SEMI)       U_NU
                 U_NU U_LT(U_BUTTON, Z) U_MT(RALT, X) &kp C              &kp V              &kp B &kp C_PP U_NU &kp N            &kp M              &kp COMMA         U_MT(RALT, DOT) U_LT(U_BUTTON, SLASH) U_NU
                                                      U_LT(U_FUN, TAB ) U_LT(U_NUM, SPACE) U_LT(U_SYM, ESC)               &kp RET U_LT(U_NAV, SPACE) &kp BSPC
-
-                // flip
-                // U_NU &kp Q             &kp W         &kp E            &kp R             &kp T               &kp Y              &kp U              &kp I              &kp O           &kp P                 U_NU
-                // U_NU U_MT(LGUI, A)     U_MT(LALT, S) U_MT(LCTRL, D)   U_MT(LSHFT, F)    &kp G               &kp H              U_MT(LSHFT, J)     U_MT(LCTRL, K)     U_MT(LALT, L)   U_MT(LGUI, SQT)       U_NU
-                // U_NU U_LT(U_BUTTON, Z) U_MT(RALT, X) &kp C            &kp V             &kp B &kp C_PP U_NU &kp N              &kp M              &kp COMMA          U_MT(RALT, DOT) U_LT(U_BUTTON, SLASH) U_NU
-                //                                      U_LT(U_FUN, DEL) U_LT(U_NUM, BSPC) U_LT(U_SYM, RET)    U_LT(U_MOUSE, TAB) U_LT(U_NAV, SPACE) U_LT(U_MEDIA, ESC)
             >;
             sensor-bindings = <
                 &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp UP DOWN
@@ -98,15 +92,9 @@
             label = "Num";
             bindings = <
                 &bootloader &u_to_U_BASE &u_to_U_EXTRA &u_to_U_TAP U_BOOT    U_NU                &kp LBKT  &kp N7  &kp N8  &kp N9    &kp RBKT  U_NU
-                &sys_reset  &kp LGUI     &kp LALT      &kp LCTRL   &kp LSHFT U_NU                &kp SQT   &kp N4  &kp N5  &kp N6    &kp EQUAL U_NU
+                &sys_reset  &kp LGUI     &kp LALT      &kp LCTRL   &kp LSHFT &kp HYP               &kp SQT   &kp N4  &kp N5  &kp N6    &kp EQUAL U_NU
                 U_NA        &u_to_U_NUM  &u_to_U_NAV   &kp RALT    U_NA      U_NU U_NU      U_NU &kp GRAVE &kp N1  &kp N2  &kp N3    &kp BSLH  U_NU
                                                        U_NA        U_NA      U_NA                &kp MINUS &kp DOT &kp N0
-
-                // flip
-                // U_NU U_BOOT   &u_to_U_TAP &u_to_U_EXTRA &u_to_U_BASE U_NA            &kp LBKT  &kp N7 &kp N8  &kp N9 &kp RBKT  U_NU
-                // U_NU &kp LGUI &kp LALT    &kp LCTRL     &kp LSHFT    U_NA            &kp EQUAL &kp N4 &kp N5  &kp N6 &kp SEMI  U_NU
-                // U_NU U_NA     &kp RALT    &u_to_U_NAV   &u_to_U_NUM  U_NA  U_NU U_NU &kp BSLH  &kp N1 &kp N2  &kp N3 &kp GRAVE U_NU
-                //                           U_NA          U_NA         U_NA            &kp MINUS &kp N0 &kp DOT
             >;
             sensor-bindings = <
                 &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp LEFT RIGHT
@@ -117,13 +105,13 @@
             label = "Sym";
             bindings = <
                 U_NA &u_to_U_BASE &u_to_U_EXTRA &u_to_U_TAP U_BOOT    U_NU           &kp LBRC  &kp AMPS &kp ASTRK &kp LPAR  &kp RBRC U_NU
-                U_NA &kp LGUI     &kp LALT      &kp LCTRL   &kp LSHFT U_NU           &kp DQT   &kp DLLR &kp PRCNT &kp CARET &kp PLUS U_NU
+                U_NA &kp LGUI     &kp LALT      &kp LCTRL   &kp LSHFT &kp HYP           &kp DQT   &kp DLLR &kp PRCNT &kp CARET &kp PLUS U_NU
                 U_NA &u_to_U_SYM  &u_to_U_MOUSE &kp RALT    U_NA      U_NU U_NU U_NU &kp TILDE &kp EXCL &kp AT    &kp HASH  &kp PIPE U_NU
                                                 U_NA        U_NA      U_NA           &kp UNDER &kp LPAR &kp RPAR
 
                 // flip
                 // U_NU U_BOOT   &u_to_U_TAP &u_to_U_EXTRA &u_to_U_BASE U_NA           &kp LBRC  &kp AMPS &kp ASTRK &kp LPAR  &kp RBRC U_NU
-                // U_NU &kp LGUI &kp LALT    &kp LCTRL     &kp LSHFT    U_NA           &kp PLUS  &kp DLLR &kp PRCNT &kp CARET &kp COLON U_NU
+                // U_NU &kp LGUI &kp LALT    &kp LCTRL     &kp LSHFT    &kp HYP           &kp PLUS  &kp DLLR &kp PRCNT &kp CARET &kp COLON U_NU
                 // U_NU U_NA     &kp RALT    &u_to_U_MOUSE &u_to_U_SYM  U_NA U_NU U_NU &kp PIPE  &kp EXCL &kp AT    &kp HASH  &kp TILDE U_NU
                 //                           U_NA          U_NA         U_NA           &kp UNDER &kp LPAR &kp RPAR
             >;
@@ -135,7 +123,7 @@
             label = "Nav";
             bindings = <
                 U_NU  &u_out_tog   &u_to_U_TAP &u_to_U_EXTRA &u_to_U_BASE U_NA                          &u_bt_sel_0 &u_bt_sel_1 &u_bt_sel_2 &u_bt_sel_3 &u_bt_sel_4  &bootloader
-                U_NU  &kp LGUI     &kp LALT    &kp LCTRL     &kp LSHFT    U_NA                          &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &u_caps_word &sys_reset
+                U_NU  &kp LGUI     &kp LALT    &kp LCTRL     &kp LSHFT    &kp HYP                          &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &u_caps_word &sys_reset
                 &soff &u_to_U_FUN  &kp RALT    &u_to_U_NUM   &u_to_U_NAV  U_NA &kp C_BRI_AUTO      U_NA &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     &kp INS      U_NU
                                                U_NA          U_NA         U_NA                          &kp RET     &kp SPACE   &kp DEL
             >;
@@ -147,13 +135,13 @@
             label = "Fun";
             bindings = <
                 U_NU &u_to_U_BASE &u_to_U_EXTRA &u_to_U_TAP U_BOOT    U_NU           &kp PSCRN       &kp F7    &kp F8    &kp F9    &kp F10 U_NA
-                U_NU &kp LGUI     &kp LALT      &kp LCTRL   &kp LSHFT U_NU           &kp SLCK        &kp F4    &kp F5    &kp F6    &kp F11 U_NA
+                U_NU &kp LGUI     &kp LALT      &kp LCTRL   &kp LSHFT &kp HYP           &kp SLCK        &kp F4    &kp F5    &kp F6    &kp F11 U_NA
                 U_NU &u_to_U_FUN  &u_to_U_MEDIA &kp RALT    U_NA      U_NU U_NU U_NU &kp PAUSE_BREAK &kp F1    &kp F2    &kp F3    &kp F12 U_NA
                                                 U_NA        U_NA      U_NA           &kp K_APP       &kp SPACE &kp BSPC
 
                 // flip
                 // U_NU U_BOOT   &u_to_U_TAP &u_to_U_EXTRA &u_to_U_BASE U_NA           &kp PSCRN       &kp F7    &kp F8    &kp F9 &kp F12 U_NU
-                // U_NU &kp LGUI &kp LALT    &kp LCTRL     &kp LSHFT    U_NA           &kp SLCK        &kp F4    &kp F5    &kp F6 &kp F11 U_NU
+                // U_NU &kp LGUI &kp LALT    &kp LCTRL     &kp LSHFT    &kp HYP           &kp SLCK        &kp F4    &kp F5    &kp F6 &kp F11 U_NU
                 // U_NU U_NA     &kp RALT    &u_to_U_MEDIA &u_to_U_FUN  U_NA U_NU U_NU &kp PAUSE_BREAK &kp F1    &kp F2    &kp F3 &kp F10 U_NU
                 //                           U_NA          U_NA         U_NA           &kp TAB         &kp SPACE &kp K_APP
             >;
@@ -174,7 +162,7 @@
             label = "Mouse";
             bindings = <
                 U_NU U_BOOT   &u_to_U_TAP &u_to_U_EXTRA &u_to_U_BASE  U_NA           U_RDO  U_PST  U_CPY  U_CUT  U_UND U_NU
-                U_NU &kp LGUI &kp LALT    &kp LCTRL     &kp LSHFT     U_NA           U_MS_L U_MS_D U_MS_U U_MS_R U_NU  U_NU
+                U_NU &kp LGUI &kp LALT    &kp LCTRL     &kp LSHFT     &kp HYP           U_MS_L U_MS_D U_MS_U U_MS_R U_NU  U_NU
                 U_NU U_NA     &kp RALT    &u_to_U_SYM   &u_to_U_MOUSE U_NA U_NU U_NU U_WH_L U_WH_D U_WH_U U_WH_R U_NU  U_NU
                                           U_NA          U_NA          U_NA           U_BTN2 U_BTN1 U_BTN3
             >;
@@ -188,7 +176,7 @@
             label = "Extra";
             bindings = <
                 U_NU &kp Q             &kp W         &kp E              &kp R              &kp T                           &kp Y            &kp U              &kp I             &kp O           &kp P                 U_NU
-                U_NU U_MT(LGUI, A)     U_MT(LALT, S) U_MT(LCTRL, D)     U_MT(LSHFT, F)     &kp G                           &kp H            U_MT(LSHFT, J)     U_MT(LCTRL, K)    U_MT(LALT, L)   U_MT(LGUI, SQT)       U_NU
+                U_NU U_MT(LGUI, A)     U_MT(LALT, S) U_MT(LCTRL, D)     U_MT(LSHFT, F)     U_MT(HYP, G)                           U_MT(HYP, H)            U_MT(LSHFT, J)     U_MT(LCTRL, K)    U_MT(LALT, L)   U_MT(LGUI, SQT)       U_NU
                 U_NU U_LT(U_BUTTON, Z) U_MT(RALT, X) &kp C              &kp V              &kp B &u_to_U_BASE &u_to_U_BASE &kp N            &kp M              &kp COMMA         U_MT(RALT, DOT) U_LT(U_BUTTON, SLASH) U_NU
                                                      U_LT(U_MEDIA, TAB) U_LT(U_NUM, SPACE) U_LT(U_MOUSE, ESC)               &kp RET U_LT(U_NAV, SPACE) U_LT(U_FUN, BSPC)
             >;
@@ -201,7 +189,7 @@
             label = "Button";
             bindings = <
                 U_NU U_UND    U_CUT    U_CPY     U_PST     U_RDO           U_RDO  U_PST     U_CPY     U_CUT    U_UND    U_NU
-                U_NU &kp LGUI &kp LALT &kp LCTRL &kp LSHFT U_NU            U_NU   &kp LSHFT &kp LCTRL &kp LALT &kp LGUI U_NU
+                U_NU &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &kp HYP            &kp HYP   &kp LSHFT &kp LCTRL &kp LALT &kp LGUI U_NU
                 U_NU U_UND    U_CUT    U_CPY     U_PST     U_RDO U_NU U_NU U_RDO  U_PST     U_CPY     U_CUT    U_UND    U_NU
                                        U_BTN3    U_BTN1    U_BTN2          U_BTN2 U_BTN1    U_BTN3
             >;
@@ -215,7 +203,7 @@
             label = "Media";
             bindings = <
                 U_NU U_BOOT   &u_to_U_TAP &u_to_U_EXTRA &u_to_U_BASE  U_NA                         U_RGB_EFF   U_RGB_HUI    U_RGB_SAI    U_RGB_BRI   U_RGB_TOG   U_NU
-                U_NU &kp LGUI &kp LALT    &kp LCTRL     &kp LSHFT     U_NA                         &u_bt_sel_0 &u_bt_sel_1  &u_bt_sel_2  &u_bt_sel_3 &u_bt_sel_4 U_NU
+                U_NU &kp LGUI &kp LALT    &kp LCTRL     &kp LSHFT     &kp HYP                         &u_bt_sel_0 &u_bt_sel_1  &u_bt_sel_2  &u_bt_sel_3 &u_bt_sel_4 U_NU
                 U_NU U_NA     &kp RALT    &u_to_U_FUN   &u_to_U_MEDIA U_NA &bootloader &bootloader &kp C_PREV  &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT  &u_out_tog  U_NU
                                           U_NA          U_NA          U_NA                         &kp C_STOP  &kp C_PP     &kp C_MUTE
             >;
