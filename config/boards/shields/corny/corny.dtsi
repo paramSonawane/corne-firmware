@@ -2,7 +2,7 @@
 
 / {
     chosen {
-      zmk,kscan = &side_band_behavior_triggers;
+      zmk,kscan = &kscan0;
       zmk,matrix_transform = &default_transform;
     };
 
@@ -35,16 +35,16 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5) RC(3,5) RC(3,6) RC(2,6) RC(2,7) 
         ;
     };
 
-    side_band_behavior_triggers: side_band_behavior_triggers {
-        compatible = "zmk,kscan-sideband-behaviors";
-        wakeup-source;
-        kscan = <&kscan0>;
-        soft_off {
-            column = <5>;
-            row = <3>;
-            bindings = <&hw_soft_off>;
-        };
-    };
+    // side_band_behavior_triggers: side_band_behavior_triggers {
+    //     compatible = "zmk,kscan-sideband-behaviors";
+    //     wakeup-source;
+    //     kscan = <&kscan0>;
+    //     soft_off {
+    //         column = <5>;
+    //         row = <3>;
+    //         bindings = <&hw_soft_off>;
+    //     };
+    // };
 
     left_encoder: encoder_left {
         compatible = "alps,ec11";
