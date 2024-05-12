@@ -127,7 +127,7 @@
                                                       U_BTN1            U_BTN3           U_BTN2               U_NA    U_NA      U_NA                 
             >;
             sensor-bindings = <
-                &inc_dec_kp U_WH_L U_WH_R &inc_dec_kp U_WH_U U_WH_D
+                &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN
             >;
         };
 
