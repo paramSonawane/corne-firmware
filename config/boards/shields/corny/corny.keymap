@@ -125,7 +125,7 @@
                // U_NU &kp LGUI &kp LALT    &kp LCTRL     &kp LSHFT     &kp HYP              U_MS_L U_MS_D U_MS_U U_MS_R U_NU  U_NU
                 U_NU &kp LGUI &kp LALT    &kp LCTRL     &kp LSHFT     &kp HYP              &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT U_NU  U_NU
                 U_NU U_NA     &kp RALT    &u_to_U_SYM   &u_to_U_MOUSE U_NA    U_NU    U_NU U_WH_L U_WH_D U_WH_U U_WH_R U_NU  U_NU
-                                          &mkp LCLK     &mkp MCLK     &mkp RCLK               U_NA   U_NA   U_NA                 
+                                          U_BTN2        U_BTN1        U_BTN3               U_NA   U_NA   U_NA                 
             >;
             sensor-bindings = <
                 &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp UP DOWN
