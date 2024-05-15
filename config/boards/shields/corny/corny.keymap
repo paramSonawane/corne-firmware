@@ -42,6 +42,14 @@
 #define U_NP &none // key is not present
 #define U_NA &none // present but not available for use
 #define U_NU &none // available but not used
+#define M_SENS 600
+#define MOUSE_UP &mmv MOVE_Y(-M_SENS)
+#define MOUSE_DN &mmv MOVE_Y(M_SENS)
+#define MOUSE_LF &mmv MOVE_X(-M_SENS)
+#define MOUSE_RT &mmv MOVE_X(M_SENS)
+#define MOUSE_FST &mmv MOVE_X(3)
+#define MOUSE_SLW &mmv MOVE_X(1)
+#define MOUSE_NRML &mmv MOVE_X(2)
 
 / {
     keymap {
@@ -66,7 +74,7 @@
                 &bootloader &u_to_U_BASE &u_to_U_EXTRA &u_to_U_TAP U_BOOT    U_NU                 &kp LBKT  &kp N7  &kp N8  &kp N9    &kp RBKT  U_NU
                 &sys_reset  &kp LGUI     &kp LALT      &kp LCTRL   &kp LSHFT &kp HYP              &kp SQT   &kp N4  &kp N5  &kp N6    &kp EQUAL U_NU
                 &soff       &u_to_U_NUM  &u_to_U_NAV   &kp RALT    U_NA      U_NU    U_NU    U_NU &kp GRAVE &kp N1  &kp N2  &kp N3    &kp BSLH  U_NU
-                                                       U_NA        U_NA      U_NA                 &kp MINUS &kp DOT &kp N0
+                                                       U_NA        U_NA      U_NA                 &kp MINUS &kp N0  &kp DOT
             >;
             sensor-bindings = <
                 &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp LEFT RIGHT
@@ -121,10 +129,10 @@
         U_MOUSE {
             label = "Mouse";
             bindings = <
-                U_NU &mmv MOVE_X(3) U_BTN1            &mmv MOVE_Y(-500) U_BTN2           U_NA                 U_RDO   U_PST     U_CPY     U_CUT    U_UND    U_NU
-                U_NU &mmv MOVE_X(1) &mmv MOVE_X(-500) &mmv MOVE_Y(500)  &mmv MOVE_X(500) U_NA                 &kp HYP &kp LSHFT &kp LCTRL &kp LALT &kp LGUI U_NU
-                U_NU &mmv MOVE_X(2) U_NA              U_NA              U_NA             U_NA    U_NU    U_NU U_WH_L  U_WH_D    U_WH_U    U_WH_R   U_NU     U_NU
-                                                      U_BTN1            U_BTN3           U_BTN2               U_NA    U_NA      U_NA                 
+                U_NU MOUSE_SLW  U_BTN1   MOUSE_UP U_BTN2   U_NA             U_RDO   U_PST     U_CPY     U_CUT    U_UND    U_NU
+                U_NU MOUSE_NRML MOUSE_LF MOUSE_DN MOUSE_RT U_NA             &kp HYP &kp LSHFT &kp LCTRL &kp LALT &kp LGUI U_NU
+                U_NU MOUSE_FST  U_NA     U_NA     U_NA     U_NA   U_NU U_NU U_WH_L  U_WH_D    U_WH_U    U_WH_R   U_NU     U_NU
+                                         U_BTN3   U_BTN2   U_BTN1           U_NA    U_NA      U_NA                 
             >;
             sensor-bindings = <
                 &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN
