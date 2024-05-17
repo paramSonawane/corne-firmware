@@ -1,28 +1,126 @@
+#define TIMEOUT_MS 40
+#define WAIT_MS 180
 / { 
     combos {
         compatible = "zmk,combos";
         combo_caps_word {
-            timeout-ms = <100>;
+            timeout-ms = <TIMEOUT_MS>;
             key-positions = <16 19>;
             bindings = <&caps_word>;
         };
 
-        combo_minus {
-            timeout-ms = <150>;
-            key-positions = <1 10>;
+       combo_minus {
+            require-prior-idle-ms = <WAIT_MS>;
+            timeout-ms = <TIMEOUT_MS>;
+            key-positions = <9 10>;
             bindings = <&kp MINUS>;
         };
 
         combo_equal {
-            timeout-ms = <150>;
-            key-positions = <13 22>;
+            require-prior-idle-ms = <WAIT_MS>;
+            timeout-ms = <TIMEOUT_MS>;
+            key-positions = <21 22>;
             bindings = <&kp EQUAL>;
         };
 
         combo_under {
-            timeout-ms = <150>;
-            key-positions = <25 36>;
+            require-prior-idle-ms = <WAIT_MS>;
+            timeout-ms = <TIMEOUT_MS>;
+            key-positions = <35 36>;
             bindings = <&kp UNDER>;
+       };
+
+        combo_bracket_close {
+            require-prior-idle-ms = <WAIT_MS>;
+            timeout-ms = <TIMEOUT_MS>;
+            key-positions = <7 8>;
+            bindings = <&kp RBKT>;
         };
+
+
+        combo_braces_close {
+            require-prior-idle-ms = <WAIT_MS>;
+            timeout-ms = <TIMEOUT_MS>;
+            key-positions = <19 20>;
+            bindings = <&kp RBRC>;
+        };
+
+
+        combo_paran_close {
+            require-prior-idle-ms = <WAIT_MS>;
+            timeout-ms = <TIMEOUT_MS>;
+            key-positions = <33 34>;
+            bindings = <&kp RPAR>;
+        };   
+
+
+       combo_single_quote {
+            require-prior-idle-ms = <WAIT_MS>;
+            timeout-ms = <TIMEOUT_MS>;
+            key-positions = <8 9>;
+            bindings = <&kp SQT>;
+        };
+
+        combo_double_quote {
+            require-prior-idle-ms = <WAIT_MS>;
+            timeout-ms = <TIMEOUT_MS>;
+            key-positions = <20 21>;
+            bindings = <&kp DQT>;
+        };    
+
+        combo_back_ticks {
+            require-prior-idle-ms = <WAIT_MS>;
+            timeout-ms = <TIMEOUT_MS>;
+            key-positions = <34 35>;
+            bindings = <&kp GRAVE>;
+        };   
+
+
+
+        combo_bracket_open {
+            require-prior-idle-ms = <WAIT_MS>;
+            timeout-ms = <TIMEOUT_MS>;
+            key-positions = <3 4>;
+            bindings = <&kp LBKT>;
+        };
+        combo_braces_open {
+            require-prior-idle-ms = <WAIT_MS>;
+            timeout-ms = <TIMEOUT_MS>;
+            key-positions = <15 16>;
+            bindings = <&kp LBRC>;
+        };
+ 
+        combo_paran_open {
+            require-prior-idle-ms = <WAIT_MS>;
+            timeout-ms = <TIMEOUT_MS>;
+            key-positions = <27 28>;
+            bindings = <&kp LPAR>;
+        };    
+        combo_esc {
+            require-prior-idle-ms = <WAIT_MS>;
+            timeout-ms = <TIMEOUT_MS>;
+            key-positions = <14 15>;
+            bindings = <&kp ESC>;
+        };
+
+        combo_tab {
+            require-prior-idle-ms = <WAIT_MS>;
+            timeout-ms = <TIMEOUT_MS>;
+            key-positions = <13 14>;
+            bindings = <&kp TAB>;
+        };    
+
+        combo_del {
+            require-prior-idle-ms = <WAIT_MS>;
+            timeout-ms = <TIMEOUT_MS>;
+            key-positions = <26 27>;
+            bindings = <&kp DEL>;
+        };    
+        combo_enter{
+            require-prior-idle-ms = <WAIT_MS>;
+            timeout-ms = <TIMEOUT_MS>;
+            key-positions = <40 41>;
+            bindings = <&kp RET>;
+        };    
     };
 };
