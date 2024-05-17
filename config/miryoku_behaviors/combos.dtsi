@@ -1,4 +1,4 @@
-#define TIMEOUT_MS 40
+#define TIMEOUT_MS 50
 #define WAIT_MS 180
 / { 
     combos {
@@ -117,7 +117,7 @@
             bindings = <&kp DEL>;
         };    
         combo_enter{
-            require-prior-idle-ms = <WAIT_MS>;
+            // require-prior-idle-ms = <WAIT_MS>;
             timeout-ms = <TIMEOUT_MS>;
             key-positions = <40 41>;
             bindings = <&kp RET>;
